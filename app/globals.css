@@ -71,6 +71,7 @@
 :root {
   --p: #ffffff;
   --ps: #f2f2f2;
+  --pss: #d0d0d0;
   --s: #141414;
   --v: #6419f0;
   --vc: #c494ff;
@@ -80,6 +81,7 @@
   --s: #ffffff;
   --p: #141414;
   --ps: #1c1c1c;
+  --pss: #2c2c2c;
   --v: #6419f0;
   --vf: #c494ff;
   --vc: #211241;
@@ -147,6 +149,29 @@
 .p3-5 {
   padding: 3.5rem;
 }
+.t-violet {
+  color: var(--v);
+}
+.t-violetf {
+  color: var(--vf);
+}
+.t-violetc {
+  color: var(--vc);
+}
+.t-principal {
+  color: var(--p);
+}
+.t-secondary {
+  color: var(--s);
+}
+h1 {
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+h2 {
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+}
 .list-logo li {
   padding: 5px;
   border-radius: 50%;
@@ -165,10 +190,8 @@
 p {
   font-size: 14px;
 }
-header h1 {
-  color: var(--v);
+header .name-app {
   font-weight: 500;
-  text-align: center;
   font-size: 1.5rem;
 }
 .sr-only {
@@ -204,4 +227,56 @@ header h1 {
 }
 body {
   background-color: var(--p);
+}
+.manage-todo {
+  background-color: var(--ps);
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.grid2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--pss);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 800px) {
+  .grid2 {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .grid2 > * {
+    flex-basis: calc(50% - 10px);
+  }
+}
+.ui-input {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--ps);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid var(--pss);
+}
+.ui-input:focus {
+  outline: none;
+  border-color: var(--s);
+}
+.ui-button {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--v);
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.ui-button:hover {
+  cursor: pointer;
+  background-color: var(--vf);
+  transition: 0.5s ease-in-out;
 }
